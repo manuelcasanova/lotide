@@ -76,3 +76,17 @@ assertEqual(1, 1);
 //Click on results - matching text
 //Go to C/C++/Java source code
 //Copy and paste as string
+
+
+//Below is some code to play with ES6 Template Literals
+
+const assertEqual2 = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`\uD83D\uDFE2 Assertion Passed: ${actual} === ${expected}!`)
+  } else {
+    console.log(`\uD83D\uDD34 Assertion Failed: ${actual} !== ${expected}!`)
+  }
+};
+
+assertEqual2("Lighthouse Labs", "Bootcamp");
+assertEqual2(1, 1);
