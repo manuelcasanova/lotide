@@ -82,9 +82,9 @@ assertEqual(1, 1);
 
 const assertEqual2 = function(actual, expected) {
   if (actual === expected) {
-    console.log(`\uD83D\uDFE2 Assertion Passed: ${actual} === ${expected}!`)
+    console.log(`\uD83D\uDFE2 \uD83D\uDFE2 Assertion Passed: ${actual} === ${expected}!`)
   } else {
-    console.log(`\uD83D\uDD34 Assertion Failed: ${actual} !== ${expected}!`)
+    console.log(`\uD83D\uDD34 \uD83D\uDD34 Assertion Failed: ${actual} !== ${expected}!`)
   }
 };
 
