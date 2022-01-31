@@ -27,20 +27,32 @@ const eqArrays = function(array1, array2) {
 //BELOW: Function middle
 
 
+// const middle = function(array) {
+//   let result = [];
+//   if (array.length <= 2) {
+//     return result;                                          //If the array has one or two numbers, there's no middle, return an empty array
+//   } else if (array.length > 2 && array.length % 2 !== 0) { //If the array has more than two numbers and is odd
+//     let mid = array[Math.floor(array.length / 2)];
+//     return [mid];                                             //I don't know if this is a good approach. It was returning a number, but we wanted it to be an array. So I just wrapped the variable mid in square brackets
+//   } else if (array.length > 2 && array.length % 2 === 0) { //If the array has more than two numbers and is even
+//     let mid2 = [];                                          //New array that contains two elements
+//     let mid2sub1 = array[Math.floor(array.length / 2) - 1];
+//     let mid2sub2 = array[Math.floor(array.length / 2)];
+//     mid2.push(mid2sub1, mid2sub2);
+//     return mid2;
+//   }
+// };
+
 const middle = function(array) {
   let result = [];
-  if (array.length <= 2) {
-    return result; //If the array has one or two numbers, there's no middle, return an empty array
-  } else if (array.length > 2 && array.length % 2 !== 0) { //If the array has more than two numbers and is odd
-    let mid = array[Math.floor(array.length / 2)];
-    return [mid]; //I don't know if this is a good approach. It was returning a number, but we wanted it to be an array. So I just wrapped the variable mid in square brackets
-  } else if (array.length > 2 && array.length % 2 === 0) { //If the array has more than two numbers and is even
-    let mid2 = [];                                          //New array that contains two elements
-    let mid2sub1 = array[Math.floor(array.length / 2) - 1];
-    let mid2sub2 = array[Math.floor(array.length / 2)];
-    mid2.push(mid2sub1, mid2sub2);
-    return mid2;
+  if (array.length <= 2) {                               
+  } else if (array.length > 2 && array.length % 2 !== 0) { 
+    result.push(array[Math.floor(array.length / 2)]);      
+  } else if (array.length > 2 && array.length % 2 === 0) { 
+    result.push(array[Math.floor(array.length / 2) - 1])
+    result.push(array[Math.floor(array.length / 2)])
   }
+  return result;
 };
 
 console.log(middle([1])); // []
@@ -56,4 +68,6 @@ console.log(assertArraysEqual(middle([1]), []));
 console.log(assertArraysEqual(middle([1, 2]), []));
 console.log(assertArraysEqual(middle([1, 2, 3]), [2]));
 console.log(assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]));
+
+console.log(eqArrays(middle([1, 2, 3, 4, 5]), [3])); //true
+console.log(eqArrays(middle([1, 2, 3, 4, 5]), [1])); //false
