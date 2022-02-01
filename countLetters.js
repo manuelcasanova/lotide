@@ -6,24 +6,25 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function (string) {
+const countLetters = function(string) {
   const count = {};
 
 	
-	for (let i = 0; i < string.length; i++) {  // Loop over the letters of the word
-		const letter = string[i];                 //Each letter is string [i]
+  for (let i = 0; i < string.length; i++) {  // Loop over the letters of the word
+    const letter = string[i];                 //Each letter is string [i]
 
-		
-		if (!count[letter]) { // The object hast not that letter. We create it assigning value of 1
-			count[letter] = 1;
+    if (string[i] !== ' ') {								//this part to not count the spaces
+      if (!count[letter]) { // The object hast not that letter. We create it assigning value of 1
+        count[letter] = 1;
 
 			
-		} else { // Letter is already there. We increment +1
-			count[letter]++;
-		}
-	}
+      } else { // Letter is already there. We increment +1
+        count[letter]++;
+      }
+    }
+  }
 
-	return count;
+  return count;
 };
 
 console.log(countLetters("Hello")); //Should return an object { H: 1, e: 1, l: 2, o: 1 }
