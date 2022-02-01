@@ -1,41 +1,22 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`\uD83D\uDFE2 \uD83D\uDFE2 Assertion Passed: ${actual} === ${expected}!`);
-  } else {
-    console.log(`\uD83D\uDD34 \uD83D\uDD34 Assertion Failed: ${actual} !== ${expected}!`);
+const findKeyByValue  = (obj,value) => {
+  for (const objKey in obj) {
+    if (obj[objKey] === value) {
+      return objKey;
+    }
   }
 };
 
-//Aproach 1: trim
-//Aproach 2: delete object key: empty
-
-const countLetters = function(string) {
-  const count = {};
-	
-	  for (let i = 0; i < string.length; i++) {  // Loop over the letters of the word
-		  const letter = string[i];                 //Each letter is string [i]
-
-    if (!count[letter]) { // The object hast not that letter. We create it assigning value of 1
-			  count[letter] = 1;
-
-			
-		  } else { // Letter is already there. We increment +1
-			count[letter]++;
-		  }
-	  }
-
-	  return count;
+const bestTVShowsByGenre = { 
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama:  "The Wire"
 };
 
-console.log(countLetters("Hello")); //Should return an object { H: 1, e: 1, l: 2, o: 1 }
-console.log(countLetters("Hi")); //Should return an object { H: 1, i: 1 }
-console.log(countLetters("HI HI")); //Should return an object { H: 2, i: 2 } and no ""
+console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"));
+console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined));
 
-//string.prototype.trim
-
-//Test
-
-const test = countLetters("Hello");
-console.log(assertEqual(test["H"], 1));
-
-//Not count spaces in string --> / /g,''
+console.log("");
+console.log("Below: Test assert equal function")
+console.log("");
+assertEqual("This function", "is supposed to fail");
+assertEqual(1, 1);

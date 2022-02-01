@@ -88,5 +88,8 @@ const assertEqual2 = function(actual, expected) {
   }
 };
 
-assertEqual2("Lighthouse Labs", "Bootcamp");
-assertEqual2(1, 1);
+console.log("");
+console.log("Below: Test assert equal function")
+console.log("");
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual(1, 1);
