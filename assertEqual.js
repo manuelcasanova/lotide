@@ -81,18 +81,3 @@ assertEqual(1, 1);
 //Copy and paste as string
 
 
-//Below is some code to play with ES6 Template Literals
-
-const assertEqual2 = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`\uD83D\uDFE2 \uD83D\uDFE2 Assertion Passed: ${actual} === ${expected}!`);
-  } else {
-    console.log(`\uD83D\uDD34 \uD83D\uDD34 Assertion Failed: ${actual} !== ${expected}!`);
-  }
-};
-
-console.log("");
-console.log("Below: Test assert equal function")
-console.log("");
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);

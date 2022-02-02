@@ -1,13 +1,10 @@
-const assertArraysEqual = function(array1, array2) {
-  if (array1.length !== array2.length)  {
-    return `\uD83D\uDD34 Assertion Failed: both arrays are not equal`;
+const assertArraysEqual = function (array1, array2) {
+  let result = eqArrays(array1, array2)
+  if (result === true) {
+    console.log(`\uD83D\uDFE2 Assertion Passed: ${array1} === ${array2} `);
+  } else {
+    console.log(`\uD83D\uDD34 Assertion Failed: ${array1} !== ${array2}`);
   }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return `\uD83D\uDD34 Assertion Failed: both arrays are not equal`;
-    }
-  }
-  return `\uD83D\uDFE2 Assertion Passed: both arrays are equal`;
 };
 
 const eqArrays = function(array1, array2) {
@@ -52,14 +49,7 @@ const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 console.log(without(words, ["lighthouse"]));
 // Make sure the original array was not altered by the without function
-console.log(assertArraysEqual(words, ["hello", "world", "lighthouse"]));
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 // Code below returns the index of the element we need to remove. But I couldn' t figure out how to continue
 
-// const without = function(source, itemsToRemove) {
-//   for (let i = 0; i < source.length; i++) { //Now we loop through source
-//     if (source[i] === itemsToRemove[i]) {//with this loop we compare each 
-//       return source.indexOf(source[i]); //I return the index of the part that is repeated
-//     }
-//   }
-// };

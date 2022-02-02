@@ -1,13 +1,10 @@
-const assertArraysEqual = function(array1, array2) {
-  if (array1.length !== array2.length)  {
-    return `\uD83D\uDD34 Assertion Failed: both arrays are not equal`;
+const assertArraysEqual = function (array1, array2) {
+  let result = eqArrays(array1, array2)
+  if (result === true) {
+    console.log(`\uD83D\uDFE2 Assertion Passed: ${array1} === ${array2} `);
+  } else {
+    console.log(`\uD83D\uDD34 Assertion Failed: ${array1} !== ${array2}`);
   }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return `\uD83D\uDD34 Assertion Failed: both arrays are not equal`;
-    }
-  }
-  return `\uD83D\uDFE2 Assertion Passed: both arrays are equal`;
 };
 
 const eqArrays = function(array1, array2) {
@@ -63,8 +60,8 @@ console.log(flatten([1, 2, ["three", "four"], 5, [6]])); //[1, 2, three, four, 5
 console.log(flatten([3, 2, [5, "zero"], -1, [6]]), [3, 2, 5, "zero", -1, 6]);
 console.log(flatten("hello"), [3, 2, 5, "zero", -1, 6]); //Should print "Not an array".
 
-console.log(assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]));
-console.log(assertArraysEqual(flatten([3, 2, [5, "zero"], -1, [6]]), [3, 2, 5, "zero", -1, 6]));
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+assertArraysEqual(flatten([3, 2, [5, "zero"], -1, [6]]), [3, 2, 5, "zero", -1, 6]);
 
 
 

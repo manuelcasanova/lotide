@@ -36,27 +36,29 @@ const eqObjects = function(object1, object2) {
 };
 
 
+
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true); // => true
+console.log(eqObjects(ab, ba)); //returns true
+assertEqual(eqObjects(ab, ba), true); // 🟢 🟢 Assertion Passed: true===true
 
 const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, abc), false); // => false
+assertEqual(eqObjects(ab, abc), false); // 🟢 🟢 Assertion Passed: false===false
 
 const person1 = { name: "Manuel", age: "38", country: "Spain" };
 const person2 = { name: "Manuel", age: "38", country: "Spain" };
-assertEqual(eqObjects(person1, person2), true); // => true
+assertEqual(eqObjects(person1, person2), true); // 🟢 🟢 Assertion Passed: true===true
 
 const person3 = { name: "Manuel", age: "38", country: "Spain" };
 const person4 = { name: "Manuel", age: "39", country: "Canada" };
-assertEqual(eqObjects(person3, person4), false); // => false
+assertEqual(eqObjects(person3, person4), false); // 🟢 🟢 Assertion Passed: false===false
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true); // => true
+assertEqual(eqObjects(cd, dc), true); // 🟢 🟢 Assertion Passed: true===true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false); // => false
+assertEqual(eqObjects(cd, cd2), false); //🟢 🟢 Assertion Passed: false===false
 
 console.log("");
 console.log("Below: Test assert equal function")
