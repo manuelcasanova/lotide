@@ -39,7 +39,7 @@ const eqObjects = function(object1, object2) {
 //BELOW: Function assertObjectsEqual
 
 const assertObjectsEqual = function (object1, object2) {
-  const inspect = require('util').inspect;
+  const inspect = require('util').inspect;            //We quickly realize while looking at the assertion messages that they print out objects as [object Object] which is not very descriptive and will not help with our debugging efforts.. As a workaround to this problem, we can modify our function to use the util library's inspect function. The very first thing we should do in our function is import the library so that the function can use it.
   let result = eqObjects(object1, object2)
   if (result === true) {
     console.log(`\uD83D\uDFE2 Assertion Passed: ${inspect(object1)} === ${inspect(object2)}`)
