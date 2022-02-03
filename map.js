@@ -17,7 +17,7 @@ const map = function(array, callback) {
     results.push(callback(item));
   }
   return results;
-}
+};
 
 const results1 = map(words, word => word[0]);
 console.log(results1);
@@ -36,8 +36,8 @@ const eqArrays = function(array1, array2) {
   return true; //otherwise returns true.
 };
 
-const assertArraysEqual = function (array1, array2) {
-  let result = eqArrays(array1, array2)
+const assertArraysEqual = function(array1, array2) {
+  let result = eqArrays(array1, array2);
   if (result === true) {
     console.log(`\uD83D\uDFE2 Assertion Passed: ${array1} === ${array2} `);
   } else {
@@ -46,4 +46,5 @@ const assertArraysEqual = function (array1, array2) {
 };
 
 
-assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]); // 🟢 Assertion Passed: g,c,t,m,t === g,c,t,m,t 
+assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]); // 🟢 Assertion Passed: g,c,t,m,t === g,c,t,m,t
+assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't']);
