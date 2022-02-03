@@ -37,13 +37,13 @@ Implement takeUntil which will keep collecting items from a provided array until
 
 //This is my function
 
-const takeUntil = function(array, callback) {
-    let newArr = []
-    for (let i = 0; i < array.length; i++) {
-      if (callback(array[i])) {
+const takeUntil = function(array, callback) {     //This function takes an array and a callback funciton
+    let newArr = []                               //We'll save the return in an array
+    for (let i = 0; i < array.length; i++) {        //Iterate through the whole array
+      if (callback(array[i])) {                     //If the call back function happens (if TRUE) we do not push it into the newArray
         return newArr;
       }
-      newArr.push(array[i]);
+      newArr.push(array[i]);                      //otherwise we push(add) to the newArray the element 
     }
     return newArr; 
   }
