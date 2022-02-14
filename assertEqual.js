@@ -67,11 +67,13 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-console.log("");
-console.log("Below: Test assert equal function")
-console.log("");
-assertEqual("This function", "is supposed to fail");
-assertEqual(1, 1);
+module.exports = assertEqual;
+
+// console.log("");
+// console.log("Below: Test assert equal function")
+// console.log("");
+// assertEqual("This function", "is supposed to fail");
+// assertEqual(1, 1);
 
 
 //Emoji list: https://unicode.org/emoji/charts/full-emoji-list.html#1f534
