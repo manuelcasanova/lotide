@@ -1,13 +1,10 @@
 const assertArraysEqual = function(array1, array2) {
-  if (array1.length !== array2.length)  {
-    return `\uD83D\uDD34 Assertion Failed: both arrays are not equal`;
+  let result = eqArrays(array1, array2);
+  if (result === true) {
+    console.log(`\uD83D\uDFE2 Assertion Passed: ${array1} === ${array2} `);
+  } else {
+    console.log(`\uD83D\uDD34 Assertion Failed: ${array1} !== ${array2}`);
   }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return `\uD83D\uDD34 Assertion Failed: both arrays are not equal`;
-    }
-  }
-  return `\uD83D\uDFE2 Assertion Passed: both arrays are equal`;
 };
 
 const eqArrays = function(array1, array2) {
@@ -32,7 +29,7 @@ My answer:
 {l: 0, i: 1, 10, g: 2, h: 3, 5, 13, 15 t: 4, 12 o: 6, 16 u: 7, 17, s: 8, 18, e: 9, 14, 19 n: 11 Assuming that the spaces do not count as an index, and the " either
 
 The answer:
-{ 
+{
   l: [0],
   i: [1, 11],
   g: [2],
@@ -66,10 +63,10 @@ return results
 const letterPositions = function(sentence) {
   const results = {};                               //Empty object in which the result will be stored and then printed
   
-  for (i = 0; i < sentence.length; i++) {           //Loop through the sencence
+  for (let /*this let was added when linting cause it said i was not defined*/ i = 0; i < sentence.length; i++) {           //Loop through the sencence
     if (sentence[i] !== ' ') {                      //To not count the blank spaces
       if (!results[sentence[i]]) {                  //If the object does not contain the letter, we add it
-        results[sentence[i]] = [i]  
+        results[sentence[i]] = [i];
       } else {                                      //If it does...
         results[sentence[i]].push(i);               //...we push (add at the end) the letter to the object
       }
@@ -77,7 +74,7 @@ const letterPositions = function(sentence) {
   }
   return results;                                   //It returns the object with the keys (letters) and the arrays (position - i)
 };
-console.log(letterPositions('hello'))
+console.log(letterPositions('hello'));
 
 
 

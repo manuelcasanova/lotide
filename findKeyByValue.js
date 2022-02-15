@@ -14,7 +14,7 @@ const findKeyByValue  = function(object, value)  {         //Function takes an o
   }
 };
 
-const bestTVShowsByGenre = { 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
@@ -24,7 +24,7 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
 console.log("");
-console.log("Below: Test assert equal function")
+console.log("Below: Test assert equal function");
 console.log("");
 assertEqual("This function", "is supposed to fail");
 assertEqual(1, 1);

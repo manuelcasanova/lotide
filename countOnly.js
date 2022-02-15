@@ -25,15 +25,15 @@ const countOnly = function(allItems, itemsToCount) {
   for (const item of allItems) {
     if (itemsToCount[item]) {
       if (results[item]) {
-      results[item] += 1;
+        results[item] += 1;
       } else {
-      results[item] = 1;
+        results[item] = 1;
       }
     }
   }
 
   return results;
-}
+};
 
 const firstNames = [
   "Karl",
@@ -50,13 +50,13 @@ const firstNames = [
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
  
-  console.log(assertEqual(result1["Jason"], 1));
-  console.log(assertEqual(result1["Karima"], undefined));
-  console.log(assertEqual(result1["Fang"], 2));
-  console.log(assertEqual(result1["Agouhanna"], undefined)); //This one does not pass because is FALSE in itemsToCount  
+console.log(assertEqual(result1["Jason"], 1));
+console.log(assertEqual(result1["Karima"], undefined));
+console.log(assertEqual(result1["Fang"], 2));
+console.log(assertEqual(result1["Agouhanna"], undefined)); //This one does not pass because is FALSE in itemsToCount
 
 
 
 
-  module.exports = countOnly;
+module.exports = countOnly;
 

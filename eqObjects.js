@@ -10,19 +10,19 @@ const assertEqual = function(actual, expected) {
 const eqObjects = function(object1, object2) {
 
   if (Object.keys(object1).length !== Object.keys(object2).length) {            //checks if the objects have the same number of keys
-//  test: console.log(Object.keys(object1));
-//   test: console.log(Object.keys(object2));   
- return false;
+    //  test: console.log(Object.keys(object1));
+    //   test: console.log(Object.keys(object2));
+    return false;
     
   } else {
 
     for (const keyName of Object.keys(object1)) {                               //We loop. It does not matter if it's through object1 or object2 because they have the same length
       if (Array.isArray(object1[keyName]) && Array.isArray(object2[keyName])) { //checks if the objects are arrays
-        if(!eqObjects(object1[keyName], object2[keyName])) {                     //if not, returns false
+        if (!eqObjects(object1[keyName], object2[keyName])) {                     //if not, returns false
           return false;
         }
       } else if (typeof object1[keyName] === 'object' && typeof object2[keyName] === 'object') { //checks if they are objects
-        if(!eqObjects(object1[keyName], object2[keyName])) {
+        if (!eqObjects(object1[keyName], object2[keyName])) {
           return false;
         }
       } else {
@@ -61,7 +61,7 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); //🟢 🟢 Assertion Passed: false===false
 
 console.log("");
-console.log("Below: Test assert equal function")
+console.log("Below: Test assert equal function");
 console.log("");
 assertEqual("This function", "is supposed to fail");
 assertEqual(1, 1);
