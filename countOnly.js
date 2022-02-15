@@ -58,5 +58,5 @@ const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": t
 
 
 
-//Below: Tests
+  module.exports = countOnly;
 

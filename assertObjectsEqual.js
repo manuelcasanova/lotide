@@ -56,7 +56,7 @@ const person3 = { name: "Manuel", age: "38", country: "Spain" };
 const person4 = { name: "Manuel", age: "39", country: "Canada" };
 assertObjectsEqual(person3, person4); // 🔴 Assertion Failed: { name: 'Manuel', age: '38', country: 'Spain' } !== { name: 'Manuel', age: '39', country: 'Canada' }
 
-
+module.exports = assertObjectsEqual;
 
 
 //BELOW: A first try to assertObjectsEqual. But I did not connect it to eqObjects.

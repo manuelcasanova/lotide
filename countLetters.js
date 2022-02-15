@@ -35,3 +35,5 @@ console.log(countLetters("HI HI")); //Should return an object { H: 2, I: 2 } //I
 
 const test = countLetters("Hello");
 console.log(assertEqual(test["H"], 1));
+
+module.exports = countLetters;

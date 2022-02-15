@@ -28,3 +28,5 @@ console.log("Below: Test assert equal function")
 console.log("");
 assertEqual("This function", "is supposed to fail");
 assertEqual(1, 1);
+
+module.exports = findKeyByValue;

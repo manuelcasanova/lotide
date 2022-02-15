@@ -48,3 +48,5 @@ const assertArraysEqual = function(array1, array2) {
 
 assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]); // 🟢 Assertion Passed: g,c,t,m,t === g,c,t,m,t
 assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't']);
+
+module.exports = map;

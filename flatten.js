@@ -52,6 +52,7 @@ const flatten = function(array) {                       //Flatten is a function 
   return flatArray;
 };
 
+module.exports = flatten;
 
 //BELOW: Tests
 

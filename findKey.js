@@ -93,3 +93,5 @@ assertEqual(findKey({
   "Akelarre":  { stars: 3 }
 }, callbackF), "noma");
 */
+
+module.exports = findKey;

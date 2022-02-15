@@ -89,3 +89,5 @@ console.log(assertArraysEqual(letterPositions("hello").e, [1])); //🟢 Assertio
 
 console.log(assertArraysEqual([1, 2, 3], [1, 2, 3])); // 🟢 Assertion Passed: both arrays are equal
 console.log(assertArraysEqual([1, 2, 3], [3, 2, 1])); // 🔴 Assertion Failed: both arrays are not equal
+
+module.exports = letterPositions;
