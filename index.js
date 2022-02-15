@@ -15,21 +15,21 @@ const letterPositions = require('./letterPositions');
 const map = require('./map');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  assertArraysEqual: assertArraysEqual,
-  assertEqual: assertEqual,
-  assertObjectsEqual: assertObjectsEqual,
-  countLetters: countLetters,
-  countOnly: countOnly,
-  eqArrays: eqArrays,
-  eqObjects: eqObjects,
-  findKey: findKey,
-  findKeyByValue: findKeyByValue,
-  flatten: flatten,
-  letterPositions: letterPositions,
-  map: map
+  head,//:   head,         //shortening thanks to advances on ES6
+  tail,//:   tail,
+  middle,//: middle,
+  assertArraysEqual,//: assertArraysEqual,
+  assertEqual,//: assertEqual,
+  assertObjectsEqual,//: assertObjectsEqual,
+  countLetters,//: countLetters,
+  countOnly,//: countOnly,
+  eqArrays,//: eqArrays,
+  eqObjects,//: eqObjects,
+  findKey,//: findKey,
+  findKeyByValue,//: findKeyByValue,
+  flatten,//: flatten,
+  letterPositions,//: letterPositions,
+  map//: map
 
 };
 
