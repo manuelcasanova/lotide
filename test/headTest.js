@@ -1,7 +1,24 @@
-const head = require('../head');
-const assertEqual = require('../assertEqual');
 
-assertEqual(head([5,6,7]), 5);   //head is going to return 5, assertEqual is going to confirm = 5
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); //head is going to return "Hello", assertEqual is going to confirm = "Hello"
-assertEqual(head(["oneElement"]), "oneElement");
-assertEqual(head([]),);
+//const assertEqual = require('../assertEqual');
+
+const assert = require('chai').assert;
+const head   = require('../head');
+
+describe("#head", () => {
+  it("returns 1 for [1, 2, 3]", () => {
+    assert.strictEqual(head([1, 2, 3]), 1);
+  });
+  it("returns '5' for ['5']", () => {
+    assert.strictEqual(head(['5']), '5'); 
+  });
+  it("returns 'Hello' for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.strictEqual(head(['Hello', 'Lighthouse', 'Labs']), 'Hello'); 
+  });
+  it("returns 'oneElement' for ['oneElement']", () => {
+    assert.strictEqual(head(['oneElement']), 'oneElement'); 
+  }); 
+  it("returns 'undefined' for []", () => {
+    assert.strictEqual(head([]), ); 
+  }); 
+});
+
