@@ -9,16 +9,16 @@ describe("#head", () => {
     assert.strictEqual(head([1, 2, 3]), 1);
   });
   it("returns '5' for ['5']", () => {
-    assert.strictEqual(head(['5']), '5'); 
+    assert.strictEqual(head(['5']), '5');
   });
   it("returns 'Hello' for ['Hello', 'Lighthouse', 'Labs']", () => {
-    assert.strictEqual(head(['Hello', 'Lighthouse', 'Labs']), 'Hello'); 
+    assert.strictEqual(head(['Hello', 'Lighthouse', 'Labs']), 'Hello');
   });
   it("returns 'oneElement' for ['oneElement']", () => {
-    assert.strictEqual(head(['oneElement']), 'oneElement'); 
-  }); 
+    assert.strictEqual(head(['oneElement']), 'oneElement');
+  });
   it("returns 'undefined' for []", () => {
-    assert.strictEqual(head([]), ); 
-  }); 
+    assert.strictEqual(head([]),);
+  });
 });
 
