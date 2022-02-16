@@ -53,3 +53,4 @@ assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 // Code below returns the index of the element we need to remove. But I couldn' t figure out how to continue
 
+module.exports = without;
