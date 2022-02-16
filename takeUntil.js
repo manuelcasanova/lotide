@@ -16,7 +16,7 @@ Implement takeUntil which will keep collecting items from a provided array until
 //         newArr.push(array[i]);
 //       }
 //     }
-//     return newArr; 
+//     return newArr;
 //   }
 
 
@@ -38,18 +38,18 @@ Implement takeUntil which will keep collecting items from a provided array until
 //This is my function
 
 const takeUntil = function(array, callback) {     //This function takes an array and a callback funciton
-    let newArr = []                               //We'll save the return in an array
-    for (let i = 0; i < array.length; i++) {        //Iterate through the whole array
-      if (callback(array[i])) {                     //If the call back function happens (if TRUE) we do not push it into the newArray
-        return newArr;
-      }
-      newArr.push(array[i]);                      //otherwise we push(add) to the newArray the element 
+  let newArr = [];                               //We'll save the return in an array
+  for (let i = 0; i < array.length; i++) {        //Iterate through the whole array
+    if (callback(array[i])) {                     //If the call back function happens (if TRUE) we do not push it into the newArray
+      return newArr;
     }
-    return newArr; 
+    newArr.push(array[i]);                      //otherwise we push(add) to the newArray the element
   }
+  return newArr;
+};
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);  
+const results1 = takeUntil(data1, x => x < 0);
 console.log(results1); //[ 1, 2, 5, 7, 2 ]
 
 console.log('---'); //---
@@ -68,7 +68,7 @@ console.log(results2); //[ 'I\'ve', 'been', 'to', 'Hollywood' ]
 //       newArr.push(array[i]);
 //     }
 //   }
-//   return newArr; 
+//   return newArr;
 // }
 // console.log(takeTil(data3));
 
@@ -84,7 +84,7 @@ const eqArrays = function(array1, array2) {
     if (array1[i] !== array2[i]) {//with this loop they compare each index of array1 with equivalent idex of array2. If they are not equal returns false
       return false;
     }
-  } 
+  }
   return true; //otherwise returns true.
 };
 

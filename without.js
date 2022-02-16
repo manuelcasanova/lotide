@@ -1,5 +1,5 @@
-const assertArraysEqual = function (array1, array2) {
-  let result = eqArrays(array1, array2)
+const assertArraysEqual = function(array1, array2) {
+  let result = eqArrays(array1, array2);
   if (result === true) {
     console.log(`\uD83D\uDFE2 Assertion Passed: ${array1} === ${array2} `);
   } else {
@@ -34,7 +34,7 @@ const without = function(source, itemsToRemove) {
     }
     if (!match) { //If "not match", so basically if match = false we push (add to the end of an array, in this case an empty array) source [i], that is all the words from source except those that "match"
       fixedArray.push(source[i]);
-    } 
+    }
     match = false;
   }
   return fixedArray;
