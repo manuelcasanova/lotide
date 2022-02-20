@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@manucasanova/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lotide is a library of JS helper functions, a clone of Lodash",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/manuelcasanova/lotide.git"
   },
-  "author": "",
+  "author": "Manuel Casanova",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/manuelcasanova/lotide/issues"
